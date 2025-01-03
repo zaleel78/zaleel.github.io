@@ -625,3 +625,179 @@ span{
         grid-template-columns: repeat();
     }
 }
+
+@media(max-width:1285px){
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd)
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .testimonials .wrapper{
+        grid-template-columns: repeat();
+    }
+}
+@media (max-width: 600px) {
+    /* General */
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        padding: 0 2rem; 
+    }
+
+    /* Header */
+    .header {
+        padding: 2rem 5%; 
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .navbar a {
+        font-size: 1.6rem; 
+        margin: 1rem 0;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+    }
+
+    .navbar {
+        display: none; 
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--second-bg-color);
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        padding: 2rem 0;
+    }
+
+    /* Home Section */
+    .home {
+        flex-direction: column; 
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .home-img img {
+        width: 50vw; 
+        height: auto;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+    }
+
+    /* Education Timeline */
+    .timeline-items {
+        flex-direction: column; 
+    }
+
+    .timeline-item {
+        padding: 0;
+        text-align: left;
+    }
+
+    .timeline-content {
+        padding: 2rem;
+    }
+
+    /* Services */
+    .services-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .service-box {
+        height: auto;
+        padding: 2rem;
+    }
+
+    /* Testimonials */
+    .wrapper {
+        grid-template-columns: 1fr; 
+    }
+
+    .testimonial-item {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    /* Projects */
+    .projects .wrapper {
+        grid-template-columns: 1fr; 
+    }
+
+    .project-item {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    /* Contact */
+    .contact form {
+        flex-direction: column; 
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        font-size: 1.4rem;
+    }
+
+    /* Footer */
+    .footer ul li {
+        display: block; 
+        margin-bottom: 0.5rem;
+    }
+
+    .footer .social {
+        margin-bottom: 2rem;
+    }
+}

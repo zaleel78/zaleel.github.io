@@ -813,3 +813,19 @@ span{
         line-height: 1.5;  
     }
 }
+@media (max-width: 600px) {
+    
+
+    
+    .skills h2 {
+        font-size: 2.5rem; 
+    }
+    .skill-item h3 {
+        font-size: 1.8rem; 
+    }
+    .skill-item p {
+        font-size: 1.4rem;
+    }
+
+    
+}

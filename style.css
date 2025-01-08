@@ -896,19 +896,3 @@ span{
     cursor: pointer;
 }
 
-#menu-icon.active {
-    color: #007bff;
-}
-
-/* Show toggle icon on smaller screens */
-@media screen and (max-width: 768px) {
-    #menu-icon {
-        display: block;
-    }
-    .navbar {
-        display: none;
-    }
-    .navbar.active {
-        display: flex;
-    }
-}

@@ -1,9 +1,4 @@
-const menuIcon = document.getElementById('menu-icon');
-const navbar = document.querySelector('.navbar');
 
-menuIcon.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-});
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections =  document.querySelectorAll('section');

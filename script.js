@@ -1,26 +1,34 @@
+<script>
+    // Select elements
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
 
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-let sections =  document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+    // Toggle navbar visibility on smaller screens
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default behavior
+            document.querySelector(link.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            navbar.classList.remove('active'); // Close menu on link click
+        });
+    });
 
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ']').classList.add('active')
-            })
-        }
-    })
-}
-
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+    // Highlight active link on scroll
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        navLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                link.classList.add('active');
+            }
+        });
+    });
+</script>

@@ -874,3 +874,41 @@ span{
         text-align: center;
     }
 }
+
+/* For Navbar Active State */
+.navbar a.active {
+    color: #007bff; /* Highlight color */
+    font-weight: bold;
+}
+
+/* For Toggle Menu */
+.navbar.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    width: 100%;
+}
+
+#menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#menu-icon.active {
+    color: #007bff;
+}
+
+/* Show toggle icon on smaller screens */
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }
+    .navbar.active {
+        display: flex;
+    }
+}
